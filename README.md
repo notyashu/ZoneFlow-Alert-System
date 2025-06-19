@@ -28,7 +28,7 @@ ZoneFlow Alert System is a Python application that:
 1. **Clone the repo**
 
    ```bash
-   https://github.com/notyashu/ZoneFlow-Alert-System.git
+   git clone https://github.com/notyashu/ZoneFlow-Alert-System.git
    cd ZoneFlow-Alert-System
    ```
 
