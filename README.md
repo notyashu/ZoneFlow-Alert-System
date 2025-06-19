@@ -83,7 +83,7 @@ ZoneFlow uses [Ultralytics YOLOv11 models](https://docs.ultralytics.com/tasks/de
 2. **Download a model**:
    ```python
    from ultralytics import YOLO
-   model = YOLO('yolov8n.pt')       # or yolo11s.pt, yolo11m.pt, etc.
+   model = YOLO('yolo11n.pt')       # or yolo11s.pt, yolo11m.pt, etc.
    model.export(format='onnx')      # optional: export to ONNX
    ```
 3. **Point `MODEL_PATH`** in `src/main.py` to your downloaded `.pt` file.
@@ -93,6 +93,7 @@ ZoneFlow uses [Ultralytics YOLOv11 models](https://docs.ultralytics.com/tasks/de
 ## ⚙️ Optimization Techniques Used
 
 - **Target FPS Control**: Sleep intervals to enforce `TARGET_FPS`, reducing redundant inference.
+- **Multithreading Techniques**: RTSP video capture and Telegram messaging each run on dedicated background threads using queues, ensuring non-blocking real-time performance and smooth alerting.
 - **Video Buffer Management**: `CAP_PROP_BUFFERSIZE=1` + single-slot queue to minimize latency.
 - **ByteTrack Integration**: Keeps object identities across frames cheaply, avoiding re-detection overhead.
 - **Smart Alert Debounce**: Cooldown timer (`ALERT_COOLDOWN`) per object to prevent spamming.
