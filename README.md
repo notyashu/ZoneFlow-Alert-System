@@ -28,8 +28,8 @@ ZoneFlow Alert System is a Python application that:
 1. **Clone the repo**
 
    ```bash
-   git clone https://github.com/<your_user>/ZoneFlowAlert.git
-   cd ZoneFlowAlert
+   https://github.com/notyashu/ZoneFlow-Alert-System.git
+   cd ZoneFlow-Alert-System
    ```
 
 2. **Create & activate virtual environment**
